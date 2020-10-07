@@ -8,11 +8,10 @@ class BMICalculator extends StatelessWidget {
     return MaterialApp(
       //prefix 0xFF with HEX color
       //In this case color was #1D2136
-      theme: ThemeData(
-          primaryColor: Color(0xFF1D2136),
-          accentColor: Colors.purple,
-          scaffoldBackgroundColor: Color(0xFF1D2136),
-          textTheme: TextTheme(bodyText2: TextStyle(color: Colors.white))),
+      theme: ThemeData.dark().copyWith(
+        primaryColor: Color(0xFF1D2136),
+        scaffoldBackgroundColor: Color(0xFF1D2136),
+      ),
       home: InputPage(),
     );
   }
@@ -33,11 +32,16 @@ class _InputPageState extends State<InputPage> {
       body: Center(
         child: Text('Body Text'),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          print('Pressed Button');
-        },
-        child: Icon(Icons.add),
+      floatingActionButton: Theme(
+        data: ThemeData(
+          accentColor: Colors.amber,
+        ),
+        child: FloatingActionButton(
+          onPressed: () {
+            print('Pressed Button');
+          },
+          child: Icon(Icons.add),
+        ),
       ),
     );
   }

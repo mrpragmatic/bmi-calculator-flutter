@@ -212,7 +212,13 @@ class _InputPageState extends State<InputPage> {
                   MaterialPageRoute(builder: (context) => ResultsPage()));
             },
             child: Container(
-              child: Text('CALCULATE'),
+              child: Center(
+                child: Text(
+                  'CALCULATE',
+                  style: kLargeButton,
+                ),
+              ),
+              padding: EdgeInsets.only(bottom: 5.0),
               margin: EdgeInsets.only(top: 10.0),
               color: kBottomContainerColor,
               height: kBottomContainerHeight,

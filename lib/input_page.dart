@@ -32,8 +32,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     colour: selectedGender == GenderType.male
-                        ? activeCardColor
-                        : inActiveCardColor,
+                        ? kActiveCardColor
+                        : kInActiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.mars,
                       label: 'MALE',
@@ -48,8 +48,8 @@ class _InputPageState extends State<InputPage> {
                       });
                     },
                     colour: selectedGender == GenderType.female
-                        ? activeCardColor
-                        : inActiveCardColor,
+                        ? kActiveCardColor
+                        : kInActiveCardColor,
                     cardChild: IconContent(
                       icon: FontAwesomeIcons.venus,
                       label: 'FEMALE',
@@ -61,14 +61,14 @@ class _InputPageState extends State<InputPage> {
           ),
           Expanded(
             child: ReusableCard(
-              colour: activeCardColor,
+              colour: kActiveCardColor,
               cardChild: Column(
                 crossAxisAlignment: CrossAxisAlignment.stretch,
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text(
                     'Data',
-                    style: labelTextStyle,
+                    style: kLabelTextStyle,
                   ),
                 ],
               ),
@@ -79,12 +79,12 @@ class _InputPageState extends State<InputPage> {
               children: [
                 Expanded(
                   child: ReusableCard(
-                    colour: activeCardColor,
+                    colour: kActiveCardColor,
                   ),
                 ),
                 Expanded(
                   child: ReusableCard(
-                    colour: activeCardColor,
+                    colour: kActiveCardColor,
                   ),
                 ),
               ],
@@ -92,8 +92,8 @@ class _InputPageState extends State<InputPage> {
           ),
           Container(
             margin: EdgeInsets.only(top: 10.0),
-            color: bottomContainerColor,
-            height: bottomContainerHeight,
+            color: kBottomContainerColor,
+            height: kBottomContainerHeight,
             width: double.infinity,
           )
         ],
